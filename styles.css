@@ -289,6 +289,46 @@ body {
     line-height: 1.8;
 }
 
+.experience-summary {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.total-experience {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.total-experience i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: rgba(139, 92, 246, 0.2);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-details .years {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.experience-details .label {
+    color: #e5e7eb;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
 .key-points {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -506,21 +546,25 @@ body {
     position: relative;
 }
 
+.experience-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
 .experience-card {
     background: var(--section-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.1);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(107, 70, 193, 0.1);
-    margin-bottom: 2rem;
+    border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .experience-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .company-info h3 {
@@ -530,8 +574,9 @@ body {
 }
 
 .company-info h4 {
-    color: #ffffff;
+    color: #e5e7eb;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .date {
@@ -539,23 +584,69 @@ body {
     font-weight: 500;
 }
 
-.experience-details ul {
+.experience .project-block {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience .project-block:last-child {
+    margin-bottom: 0;
+}
+
+.experience .project-block:hover {
+    transform: translateX(10px);
+}
+
+.experience .project-block h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience .project-block h4 i {
+    color: var(--accent-color);
+}
+
+.experience .project-block ul {
     list-style: none;
-    margin-bottom: 1.5rem;
+    margin-left: 1rem;
 }
 
-.experience-details li {
-    margin-bottom: 0.8rem;
+.experience .project-block ul li {
+    margin-bottom: 0.5rem;
     color: #e5e7eb;
-    padding-left: 1.5rem;
     position: relative;
+    padding-left: 1.5rem;
 }
 
-.experience-details li::before {
+.experience .project-block ul li::before {
     content: '→';
     position: absolute;
     left: 0;
     color: var(--accent-color);
+}
+
+.experience .tech-stack {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience .tech-stack span {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 /* Contact Section */
@@ -801,46 +892,17 @@ section h2::after {
         text-align: center;
     }
 
-    .timeline {
-        max-width: 100%;
-        padding: 1rem 0;
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        padding-left: 40px;
-        margin-bottom: 2rem;
-    }
-
-    .timeline-content {
-        width: 100%;
-        margin: 0 !important;
-        padding: 1.2rem;
-    }
-
-    .timeline-node {
-        left: 20px;
-        width: 16px;
-        height: 16px;
-    }
-
-    .timeline-line {
-        left: 20px;
-    }
-
-    .about-text {
+    .experience-card {
         padding: 1.5rem;
     }
 
-    .key-points {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .point {
+    .experience .project-block {
         padding: 1rem;
     }
 } 
